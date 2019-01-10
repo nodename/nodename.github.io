@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>nodename</title>
+<style type="text/css">
+body,td,th {
+  font-family: Verdana, Geneva, sans-serif;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Evolution generative art system repositories - original haXe version</h2>
+
+<p>I've moved further development of the project to <a href="https://github.com/nodename/clevolution">Clevolution</a>, in Clojure.</p>
+<p><a href="http://portal.sliderocket.com/AWUPA/Finding-Clojure">"Finding Clojure" slide presentation</a></p>
+<p>The links below refer to the original haXe version.</p>
+<br />
+<p><a href="http://flashongames.com/post/9996886291/videos-from-sept-6th-2011-event">See the video</a></p>
+<p><a href="http://portal.sliderocket.com/AWUPA/Level-Up-with-haXe">See the slides</a></p>
+<p><a href="http://cloud.github.com/downloads/nodename/Evolution/Evolution.swf">Download Evolution.swf</a></p>
+<p><a href="https://github.com/nodename/EvolutionLib"><strong>EvolutionLib</strong></a> contains the Lisp parser and interpreter and the Lisp environment that supports the Evolution system.</p>
+<p><a href="https://github.com/nodename/REPL"><strong>REPL</strong></a> is a simple simulator that exercises EvolutionLib's Lisp parser and interpreter. It installs several Lisp functions (lambdas) as symbol values into the environment, then presents several expressions that use these functions to the Lisp system for evaluation.</p>
+<p><a href="https://github.com/nodename/LispGraph"><strong>LispGraph</strong></a> passes an S-expression through the Lisp parser and draws the resulting syntax tree on the screeen.</p>
+<p><a href="https://github.com/nodename/Evolution"><strong>Evolution</strong></a> is the generative system itself. It generates a random S-expression using the image-processing primitives provided in EvolutionLib; evaluates the expression using the Lisp system; displays the resulting image on the screen along with the S-expression that generated it; and (C++ target only so far) saves the image as a PNG file with the generator expression embedded in the header.</p>
+<p>The plan is to grow Evolution into an interactive system similar to that described in <a href="http://www.karlsims.com/papers/siggraph91.html" target="_blank">Artificial Evolution for Computer Graphics</a>. This will require the ability to direct the random expression generator by interactively setting the desired tree depth and perhaps a desired subset of the primitives, and to choose file names and location for saving. There must also be a desktop interface allowing the user to view saved images and to select images for mutation or breeding (which need to be implemented) or for rerunning an S-expression at higher resolution.</p>
+<p>In addition, it is desired to expand the set of image-processing primitives to include color operations and vector graphics.</p>
+</body>
+</html>
